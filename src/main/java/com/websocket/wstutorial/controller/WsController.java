@@ -17,4 +17,9 @@ public class WsController {
     public void sendMessage(@RequestBody final Message message) {
         service.notifyFrontend(message.getMessageContent());
     }
+
+    @PostMapping("/trigger-messages")
+    public void sendScheduledMessages() {
+        service.notifyFrontendWithScheduledMessages();
+    }
 }
