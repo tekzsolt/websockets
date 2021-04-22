@@ -16,7 +16,7 @@ public class WsService {
         this.messagingTemplate = messagingTemplate;
     }
 
-    public void notifyFrontent(final String message) {
+    public void notifyFrontend(final String message) {
         ResponseMessage response = new ResponseMessage(message);
         messagingTemplate.convertAndSend("/topic/messages", response);
     }
