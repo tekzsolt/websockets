@@ -25,7 +25,7 @@ public class PlaygroundService {
         info.setRunForever(false);
         info.setRepeatIntervalMs(1500);
         info.setInitialOffsetMs(1000);
-        info.setCallbackData("This is my message!");
+        info.setCallbackData("This is my message! " + "\uD83D\uDE03");
 
         scheduler.schedule(HelloWorldJob.class, info);
     }
